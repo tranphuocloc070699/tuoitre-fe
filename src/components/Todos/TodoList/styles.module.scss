@@ -1,0 +1,204 @@
+.header {
+  display: flex;
+  margin-bottom: 14px;
+  align-items: center;
+  justify-content: space-between;
+  .headerLeft {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+    .addTaskBtn {
+      font-weight: 600;
+
+    }
+   
+    .sorting {
+      margin-left: 12px;
+      .sortingSelect {
+        margin-left: 6px;
+      }
+    }
+    
+  }
+  .headerRight {
+    .statusSelect {
+      font-weight: 600;
+      min-width: 84px;
+    }
+  }
+}
+
+.totoList {
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #f0eeee;
+}
+.loader{
+  min-height: 400px;
+  background-color: white;
+ 
+}
+.empty{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #757575;
+  min-height: 400px;
+}
+.emptyList{
+  background-color: white;
+  border: 1px solid #dbdbdb;
+}
+.todoItem {
+  user-select: none;
+  border-radius: 5px;
+  margin: 12px 0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  transition: all 0.3s ease;
+
+  &:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(1.03);
+  }
+  &:first-child{
+    margin-top: 0px;
+  }
+  &:last-child{
+    margin-bottom: 0px;
+  }
+  .itemInfo {
+    display: flex;
+    align-items: center;
+    .checkbox {
+      margin-right: 12px;
+      
+      height: 1.6rem;
+      padding: 6px;
+      width: 1.6rem;
+    }
+    h4 {
+      cursor: pointer;
+      margin: 0;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 20px;
+      
+      transition: all 0.3s ease;
+      &:hover{
+        background-color: #f0eeee;
+      }
+    }
+    p {
+      padding:0 8px;
+      font-size: 1.3rem;
+      margin: 0;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .createdAt {
+      font-weight: 400;
+      color: #757575;
+    }
+  }
+  .itemDone{
+    opacity: 0.5;
+    h4 {
+      text-decoration: line-through;
+    }
+    p {
+     text-decoration: line-through;
+    }
+  }
+  .itemController {
+    display: flex;
+    align-items: center;
+    .icon {
+      border-radius: 50%;
+      padding: 6px;
+      font-size: 2rem;
+      cursor: pointer;
+      margin: 0 10px;
+      cursor: pointer;
+      &:hover {
+        background-color: #f0eeee;
+      }
+    }
+    .deleteIcon {
+      color: red;
+    }
+    .editIcon {
+      color: rgb(110, 103, 7);
+    }
+  }
+}
+
+.addTaskTitle{
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.errorMessage{
+ 
+  text-align: center;
+  span{
+    color: rgb(250, 68, 68);
+    background-color: rgb(248, 223, 223);
+    padding: 4px 12px;
+    border-radius: 4px;
+    text-align: center;
+    margin: 12px 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+}
+
+.search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-left:12px;
+  border-radius: 20px;
+  .searchBtn {
+    position: relative;
+  }
+  input{
+    transition: all 0.4s ease;
+   width: 100%;
+   height: 100%;
+   transform: scaleX(0);
+   transform-origin: left;
+   background-color: #f0eeee;
+   outline: none;
+   border: none;
+   border-radius: 20px;
+   margin: 0 12px;
+    padding: 6px 12px;
+    font-size: 1.4rem;
+  }
+}
+.searchOnMobile{
+  margin: 10px 0 20px !important;
+}
+.onAddSuccess{
+  background-color: rgb(137, 224, 137);
+}
+.onEditSuccess{
+  background-color: rgb(238, 237, 173);
+}
+
+.hidden{
+  visibility: hidden;
+}
